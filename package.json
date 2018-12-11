@@ -1,16 +1,23 @@
 {
   "name": "valert-cli",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "version": "1.0.1",
+  "description": "V-Alert CLI Tool to trigger events from the CLI",
   "bin": {
     "valert": "bin/valert"
+  },
+  "engines": {
+    "node": ">=8"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "",
-  "license": "ISC",
+  "author": "Darrell Richards Jr (drichards@valcom.com)",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/valcom-inc/V-Alert-CLI"
+  },
+  "preferGlobal": true,
+  "license": "MIT",
   "dependencies": {
     "axios": "^0.18.0",
     "minimist": "^1.2.0",
