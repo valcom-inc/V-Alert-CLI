@@ -1,6 +1,6 @@
 {
   "name": "valert-cli",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "V-Alert CLI Tool to trigger events from the CLI",
   "bin": {
     "valert": "bin/valert"
