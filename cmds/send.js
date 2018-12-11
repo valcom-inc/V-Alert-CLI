@@ -5,7 +5,6 @@ module.exports = async (args) => {
     const spinner = ora('Sending Alert').start()
     spinner.color = 'cyan'
     const channels = []
-    console.log(args)
     if (args.c === true) {
         return spinner.warn(['Looks as if you passed back -c however did not pass back a string'])
     } else if (args.c === false) {return spinner.warn(['Looks as if you didnt pass back -c which is required'])}
@@ -32,10 +31,10 @@ module.exports = async (args) => {
         channels,
         message: args.m
       }, config)
-      .then(function (response) {
-        spinner.succeed([response.data])
+      .then((response) => {
+        spinner.succeed([JSON.stringify(response.data)])
       })
-      .catch(function (error) {
+      .catch((error) => {
         spinner.fail([error])
       });
 }
